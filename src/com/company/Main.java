@@ -22,7 +22,7 @@ public class Main {
             );
 
         //Recorrer la lista y ordenarlos.
-        List<Event> eventsSort = events.stream()
+        List<Event> eventsSort = getFirstFive(events).stream()
               .sorted(Comparator.comparing(o -> ((String) o.getName())))
               .collect(Collectors.toList());
 
